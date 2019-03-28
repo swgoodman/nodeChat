@@ -1,26 +1,27 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-
-<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="chat.js"></script>
-
-<div id="title">
-    <h1>imessage</h1>
-</div>
-
-    
-<section>
-    <div id="change_username">
-        <input id="username" type="text" />
-        <button id="send_username" type="button">Change username</button>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="chat.js"></script>
+</head>
+<body>
+    <div id="title">
+        <h1>imessage</h1>
     </div>
-</section>
-    
-<section id="chatroom">
-    <section id="feedback"></section>
-</section>
-      
-<section id="input_zone">
-    <input id="message" class="vertical-align" type="text" />
-    <button id="send_message" class="vertical-align" type="button">Send</button>
-</section>
+
+    <section>
+        <div id="change_username">
+            <input id="username" type="text" />
+            <button id="send_username" type="button">Change username</button>
+        </div>
+    </section>
+        
+    <section id="chatroom">
+        <section id="feedback"></section>
+    </section>
+        
+    <section id="input_zone">
+        <input id="message" class="vertical-align" type="text" />
+        <button id="send_message" class="vertical-align" type="button">Send</button>
+    </section>
+</body>
