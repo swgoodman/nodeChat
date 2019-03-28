@@ -13,7 +13,7 @@ $(function(){
     // Change username function
     send_username.click(function(){
         console.log(username.val());
-        socket.emit('chang_username', {username: username.val()})
+        socket.emit('change_username', {username: username.val()})
     })
 
     // Emit message
