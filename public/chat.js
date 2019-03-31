@@ -23,16 +23,21 @@ $(function(){
     	})
     })
 
-    // Listen for new message
+    // Print new message
 	socket.on("new_message", (data) => {
 	    feedback.html('');
 	    message.val('');
 	    chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>")
     })
 
-    // Listen for keystrokes
+    // Emit typing
+    message.bind('keypress', () => {
+        socket.emit('typing')
+    })
+
+    // Listen on typing
     socket.on('typing', (data) => {
-        socket.broadcast.emit('typing', {username: socket.username})
+        feedback.html("<p><i>" + data.username + "is typing..." + "</i></p>")
     })
     
 

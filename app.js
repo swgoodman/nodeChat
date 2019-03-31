@@ -31,4 +31,11 @@ io.on('connection', (socket) => {
         io.sockets.emit('new_message', {message: data.message, username: socket.username})
     });
 
+    // Listen for keystrokes
+    socket.on('typing', (data) => {
+        socket.broadcast.emit('typing', {
+            username: socket.username
+        })
+    })
+
 })
