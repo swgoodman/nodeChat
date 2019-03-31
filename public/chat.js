@@ -29,6 +29,11 @@ $(function(){
 	    message.val('');
 	    chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>")
     })
+
+    // Listen for keystrokes
+    socket.on('typing', (data) => {
+        socket.broadcast.emit('typing', {username: socket.username})
+    })
     
 
 });
