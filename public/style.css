@@ -1,25 +1,21 @@
-header {
+#title {
+    margin: auto;
+    width: 50%;
     text-align: center;
-}
-
-h1 {
-    font-family: 'Comfortaa', sans-serif;
-    margin: 10px;
+    padding: 10px;
 }
 
 div#change_username,
 div#input_zone {
-    border: 5px outset #8258FA;
 }
 
 div#change_username {
-    height: 3%;
+    height: 6%;
     display: inline-block;
-    background-color: #BCA9F5;
 }
 
 div#chatroom {
-    border: 5px inset #8258FA;
+    border: 5px solid black;
     height: 85%;
     overflow: auto;
 }
@@ -27,19 +23,9 @@ div#chatroom {
 div#input_zone {
     height: 7%;
     text-align: center;
-    background-color: #BCA9F5;
-}
-
-.vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 input#username {
-    font-family: 'Comfortaa', sans-serif;
 }
 
 input#message {
