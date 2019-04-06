@@ -39,6 +39,5 @@ $(function(){
     socket.on('typing', (data) => {
         feedback.html("<p><i>" + data.username + " is typing..." + "</i></p>")
     })
-    
 
 });
