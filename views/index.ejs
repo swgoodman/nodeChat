@@ -7,7 +7,6 @@
 
 
 <body>
-    
     <div id="change_username">
         <input id="username" type="text" />
         <button id="send_username" type="button">Change username</button>
@@ -23,7 +22,15 @@
         <button id="send_message" class="vertical-align" type="button">Send</button>
     </div>
     <div id="file upload">
-        <input id="file" type="file" />
-        <button id="upload_file" type="button">Upload!</button>
+        <form 
+            ref='uploadForm' 
+            id='uploadForm' 
+            action='http://localhost:3000/upload' 
+            method='post'
+            encType="multipart/form-data"
+        >
+            <input id="file" type="file" />
+            <button id="upload_file" type="button">Upload!</button>
+        </form>
     </div>
 </body>
