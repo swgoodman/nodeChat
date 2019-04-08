@@ -45,6 +45,7 @@ io.on('connection', (socket) => {
 app.use(fileUpload());
 
 app.post('/upload', function (req, res) {
+    console.log("upload sensed")
     if (Object.keys(req.files).length == 0) {
         return res.status(400).send('No files were uploaded.');
     }
@@ -54,7 +55,9 @@ app.post('/upload', function (req, res) {
 
     // Place the file on server
     sampleFile.mv('/file.jpg', function (err) {
+        console.log('Starting upload')
         if (err)
+            console.log('Error uploading')
             return res.status(500).send(err);
 
         res.send('File uploaded!');
