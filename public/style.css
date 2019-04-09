@@ -14,6 +14,19 @@ div#change_username {
     display: inline-block;
 }
 
+input#username {
+    display: inline-block;
+    width: 58%;
+    height: 70%;
+    font-size: 2vh;
+}
+
+button#send_username {
+    display: inline-block;
+    height: 70%;
+    width: 40%;
+}
+
 div#chatroom {
     border: 2px solid black;
     height: 85%;
