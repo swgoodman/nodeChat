@@ -1,8 +1,14 @@
+* {
+    font-family: 'Work Sans',
+    sans-serif;
+}
+
 #title {
     margin: auto;
     width: 50%;
     text-align: center;
     padding: 10px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 div#change_username,
