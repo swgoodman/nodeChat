@@ -61,11 +61,13 @@ button#send_message {
 }
 
 p.message {
-    margin: 0px;
     width: 20%;
-    height: 30px;
+    height: 20px;
     font-size: 2vh;
     padding: 1vh;
+    margin: 1vh;
+    border-radius: 25px;
+    color: white;
 }
 
 .message:nth-child(even) {

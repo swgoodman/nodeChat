@@ -18,18 +18,17 @@ $(function(){
 
     // Emit message
     send_message.click(function () {
-        let date = new Date();
     	socket.emit('new_message', {
-            message: message.val(),
-            time: date
+            message: message.val()
     	})
     })
 
     // Print new message
 	socket.on("new_message", (data) => {
+        console.log(data)
 	    feedback.html('');
 	    message.val('');
-	    chatroom.append("<p class='message'>" + data.username + ": " + data.message + data.time + "</p>")
+	    chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>")
     })
 
     // Emit typing

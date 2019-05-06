@@ -29,6 +29,7 @@ io.on('connection', (socket) => {
     })
     // Listen and broadcast new message
     socket.on('new_message', data => {
+        let date = new Date();
         io.sockets.emit('new_message', {message: data.message, username: socket.username})
     });
 
