@@ -18,8 +18,10 @@ $(function(){
 
     // Emit message
     send_message.click(function () {
+        let date = new Date();
     	socket.emit('new_message', {
-    	    message: message.val()
+            message: message.val(),
+            time: date
     	})
     })
 
@@ -27,7 +29,7 @@ $(function(){
 	socket.on("new_message", (data) => {
 	    feedback.html('');
 	    message.val('');
-	    chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>")
+	    chatroom.append("<p class='message'>" + data.username + ": " + data.message + data.time + "</p>")
     })
 
     // Emit typing
