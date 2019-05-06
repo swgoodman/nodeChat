@@ -55,7 +55,7 @@ app.post('/upload', function (req, res) {
     let sampleFile = req.files.file;
 
     // Place the file on server
-    sampleFile.mv('/file.jpg', function (err) {
+    sampleFile.mv('C:/Users/spencergoodman/developer/projects/nodechat/', function (err) {
         console.log('Starting upload')
         if (err)
             console.log('Error uploading')
